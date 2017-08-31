@@ -1,0 +1,13 @@
+<!--<html>
+	<head>
+		<title>a book</title>
+	</head>
+	<body>!-->
+{% extends "base.html" %}
+{% block content %}
+		{% if book.review %}
+			{% include "book-detail.html" %}
+		{% endif %}
+{% endblock %}
+<!--	</body>
+</html>!-->

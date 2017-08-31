@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load humanize %}
+<!--<html>
+	<head>
+		<title>my first django page</title>
+	</head>
+	<body>
+		<main>
+
+		{% if request.user.is_authenticated %}
+			<p>hello {{request.user.username|title}},you last logged in at {{request.user.last_login|date:"D d M Y"}}</p>
+		{% else%}
+			<p>welcome quest</p>
+		{% endif %}
+
+!-->		
+
+{% block content %}
+			<h1> {{books.count|apnumber }} book{{ books.count|pluralize }}</h1>
+			{% for book in books %}
+				{% include "book-detail.html" %}
+			{% endfor %}
+{% endblock %}
+	<!--	</main>
+	</body>
+</html>!-->
